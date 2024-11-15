@@ -1,0 +1,1 @@
+console.log("Hello World! (from custom-hero-custom-hero block)");
