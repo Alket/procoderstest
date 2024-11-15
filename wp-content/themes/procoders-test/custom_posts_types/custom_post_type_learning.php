@@ -1,5 +1,5 @@
 <?php
-// Register Custom Post Type "Learning"
+// Custom Post Type "Learning"
 function procoders_register_learning_post_type() {
     $labels = array(
         'name'                  => _x('Learning', 'Post Type General Name', 'procoders-test'),
@@ -18,7 +18,7 @@ function procoders_register_learning_post_type() {
         'description'           => __('A custom post type for learning', 'procoders-test'),
         'labels'                => $labels,
         'supports'              => array('title', 'editor', 'thumbnail', 'excerpt'),
-        'taxonomies'            => array(), // Leave empty; taxonomies added below
+        'taxonomies'            => array(),
         'public'                => true,
         'show_in_menu'          => true,
         'menu_position'         => 5,

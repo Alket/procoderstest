@@ -57,15 +57,16 @@ add_action('init', 'procoders_register_benefit_categories');
 
 
 
-// Register Shortcode for Benefits Category Tabs
+// Shortcode
+
 function procoders_benefits_category_tabs() {
-    // Enqueue necessary script for AJAX functionality
+    // Enqueue script for AJAX
     wp_enqueue_script('benefits-ajax-script', get_template_directory_uri() . '/js/benefits-ajax.js', array('jquery'), null, true);
     wp_localize_script('benefits-ajax-script', 'benefits_ajax_obj', array(
         'ajax_url' => admin_url('admin-ajax.php')
     ));
 
-    // Fetch all benefit categories
+    // Fetch Benefit categories
     $categories = get_terms(array(
         'taxonomy' => 'benefit_category',
         'hide_empty' => true,
@@ -77,7 +78,7 @@ function procoders_benefits_category_tabs() {
 
     ob_start();
 
-    // Tabs for each category
+    // Tabs header for category
     echo '<div class="benefits-tabs container">';
     echo '<ul class="tabs-nav">';
         foreach ($categories as $category) {
@@ -85,7 +86,7 @@ function procoders_benefits_category_tabs() {
         }
     echo '</ul>';
 
-    // Content for each category
+    // Tabs Content for category
     echo '<div class="tabs-content">';
  
     foreach ($categories as $category) {
@@ -105,8 +106,7 @@ function procoders_benefits_category_tabs() {
 add_shortcode('benefits_category_tabs', 'procoders_benefits_category_tabs');
 
 
-
-// Helper function to get Benefits posts by category
+// Get posts from benefits CPT
 function procoders_get_benefits_posts($category_id, $posts_per_page, $offset = 0) {
     $query = new WP_Query(array(
         'post_type' => 'benefits',
@@ -125,7 +125,7 @@ function procoders_get_benefits_posts($category_id, $posts_per_page, $offset = 0
         return '<div style="text-align:center">No posts found.</div>';
     }
 
-    ob_start(); // Start output buffering
+    ob_start();
     echo '<div class="benefits-posts">';
     while ($query->have_posts()) {
         $query->the_post();
@@ -139,12 +139,12 @@ function procoders_get_benefits_posts($category_id, $posts_per_page, $offset = 0
     }
     echo '</div>';
     wp_reset_postdata();
-    return ob_get_clean(); // Return the buffered content
+    return ob_get_clean();
 }
 
 
 
-// AJAX handler for loading more posts
+// AJAX Load More Posts
 function procoders_load_more_benefits_posts() {
     $category_id = intval($_POST['category']);
     $offset = intval($_POST['offset']);
@@ -152,7 +152,7 @@ function procoders_load_more_benefits_posts() {
     // Output more posts starting from the offset
     echo procoders_get_benefits_posts($category_id, 3, $offset);
 
-    wp_die(); // End AJAX response
+    wp_die();
 }
 add_action('wp_ajax_nopriv_procoders_load_more_benefits_posts', 'procoders_load_more_benefits_posts');
 add_action('wp_ajax_procoders_load_more_benefits_posts', 'procoders_load_more_benefits_posts');

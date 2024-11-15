@@ -56,7 +56,7 @@ header .container .header-navigation nav ul li.hide > a {
 }
 
 header .container .header-navigation nav > div > ul > li:not(:last-child) > a {
-  padding: 40px 0 !important;
+  padding: 15px 0 !important;
 }
 
 .custom-nav-menu > li:last-of-type a {
@@ -83,7 +83,7 @@ nav ul#menu-primary-menu {
   border: 1px solid #e6e6f5;
   overflow: hidden;
   flex-wrap: wrap;
-  top: 90px;
+  top: 110px;
 }
 
 ul.mega-menu.level-01 > li {

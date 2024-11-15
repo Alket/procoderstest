@@ -22,7 +22,6 @@ export default function Save({ attributes }) {
 
 				{/* Left Section */}
 				<div className="left-col col">
-					{/* InnerBlocks*/}
 					<InnerBlocks.Content />
 				</div>
 

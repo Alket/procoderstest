@@ -24,7 +24,6 @@ export default function Edit({ attributes, setAttributes }) {
 						padding: "20px",
 					}}
 				>
-					{/* Inner Blocks - Title, Paragraph, and Buttons */}
 					<InnerBlocks allowedBlocks={ALLOWED_BLOCKS_LEFT} />
 				</div>
 

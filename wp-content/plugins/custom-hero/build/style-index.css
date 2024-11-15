@@ -1,1 +1,103 @@
-.hero-section .col img{-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}.hero-section .left-col{display:flex;flex:0 0 50%;flex-direction:column;gap:32px;justify-content:center;padding-right:50px;width:50%}.hero-section .right-col{flex:0 0 50%;width:50%}.hero-section h2{font-size:64px;font-weight:700;line-height:65px;margin:0;padding:0}.hero-section p{font-size:28px;font-weight:500;line-height:35px;margin:0;padding:0}.hero-section .wp-block-buttons{gap:33px}.hero-section .wp-block-button{position:relative}.hero-section .wp-block-button:after{background-color:#fff;content:"";height:100%;left:5px;position:absolute;top:5px;width:100%;z-index:0}.hero-section .wp-block-button a{position:relative;z-index:1}.hero-section{padding-left:calc(50% - 580px)!important;position:relative}.elipse{border-radius:50%;position:absolute}.elipse.elipse01{border:5px dashed hsla(0,0%,100%,.1);bottom:-116px;height:233px;left:-116px;width:233px}.elipse.elipse02{border:6px solid hsla(0,0%,100%,.1);bottom:-92px;height:184px;left:-92px;width:184px}.elipse.elipse03{border:6px dashed hsla(0,0%,100%,.1);bottom:-68px;height:137px;left:-68px;width:137px}
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+.hero-section .col img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.hero-section .left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  width: 50%;
+  flex: 0 0 50%;
+  padding-right: 50px;
+}
+
+.hero-section .right-col {
+  flex: 0 0 50%;
+  width: 50%;
+}
+
+.hero-section h2 {
+  font-size: 64px;
+  line-height: 65px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-section p {
+  font-size: 28px;
+  line-height: 35px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-section .wp-block-buttons {
+  gap: 33px;
+}
+
+.hero-section .wp-block-button {
+  position: relative;
+}
+
+.hero-section .wp-block-button:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  left: 5px;
+  top: 5px;
+  z-index: 0;
+}
+
+.hero-section .wp-block-button a {
+  z-index: 1;
+  position: relative;
+}
+
+.hero-section {
+  padding-left: calc((100% - 1160px) / 2) !important;
+}
+
+.hero-section {
+  position: relative;
+}
+
+.elipse {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.elipse.elipse01 {
+  width: 233px;
+  height: 233px;
+  left: -116px;
+  bottom: -116px;
+  border: 5px dashed rgba(255, 255, 255, 0.1);
+}
+
+.elipse.elipse02 {
+  border: 6px solid rgba(255, 255, 255, 0.1);
+  width: 184px;
+  height: 184px;
+  bottom: -92px;
+  left: -92px;
+}
+
+.elipse.elipse03 {
+  width: 137px;
+  height: 137px;
+  border: 6px dashed rgba(255, 255, 255, 0.1);
+  bottom: -68px;
+  left: -68px;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
