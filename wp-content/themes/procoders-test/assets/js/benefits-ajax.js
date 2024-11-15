@@ -6,6 +6,11 @@ jQuery(document).ready(function ($) {
     let category = button.data("category");
     let offset = button.data("offset");
 
+    // Spin Loader
+    let spinner = $("<div class='spinner'></div>");
+    button.after(spinner);
+    spinner.show();
+
     $.ajax({
       url: benefits_ajax_obj.ajax_url,
       type: "POST",
@@ -25,6 +30,12 @@ jQuery(document).ready(function ($) {
         } else {
           button.remove();
         }
+      },
+      complete: function () {
+        spinner.remove();
+      },
+      error: function () {
+        alert("An error occurred while loading more posts.");
       },
     });
   });
